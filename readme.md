@@ -1,7 +1,7 @@
 # Problem 1 - Implementing a Pipe Function
 
 ## Fisrt we define pointed_function and pipe_function
-* pointed_function takes a int val and return val + 1
+* pointed_function takes an int val and return val + 1
 * pipe_function takes a val and an arbitrary number of functions and transform val by those functions 
 
 
@@ -103,7 +103,7 @@ def another_pointed_function(val):
 
 ```python
 # should raise assertion error 
-# val is a int which is not the type another_pointed_function requires, pipe_function should return None
+# val is an int which is not the type another_pointed_function requires, pipe_function should return None
 assert(pipe_function(5, another_pointed_function) == 6)
 ```
 
@@ -115,9 +115,9 @@ assert(pipe_function(5, another_pointed_function) == 6)
 
     AssertionError                            Traceback (most recent call last)
 
-    <ipython-input-8-07622516ddf7> in <module>()
+    <ipython-input-8-ead12240a17e> in <module>()
           1 # should raise assertion error
-          2 # val is a int which is not the type another_pointed_function requires, pipe_function should return None
+          2 # val is an int which is not the type another_pointed_function requires, pipe_function should return None
     ----> 3 assert(pipe_function(5, another_pointed_function) == 6)
     
 
@@ -184,56 +184,56 @@ for val, function_count in zip(vals, function_counts):
     test_pipe_function(val, function_count)
 ```
 
-    testing with value 623633358, 698135 functions
-    testing with value -1597983847, 418287 functions
-    testing with value -2878385124, 825604 functions
-    testing with value -1611495882, 26685 functions
-    testing with value -3079479769, 37926 functions
-    testing with value -3832672477, 715285 functions
-    testing with value -1931166832, 48664 functions
-    testing with value -3713785096, 652057 functions
-    testing with value -2046658973, 719168 functions
-    testing with value 3969309985, 102809 functions
-    testing with value -424417175, 348120 functions
-    testing with value 1363437804, 385543 functions
-    testing with value 4019401431, 17643 functions
-    testing with value -4048488091, 844543 functions
-    testing with value 3750048336, 242832 functions
-    testing with value -3736889990, 640987 functions
-    testing with value -2595198182, 403992 functions
-    testing with value -1541607536, 693191 functions
-    testing with value 2349772400, 593352 functions
-    testing with value -310104137, 337974 functions
-    testing with value -1658318705, 77584 functions
-    testing with value 2406904483, 11098 functions
-    testing with value 2777056533, 561121 functions
-    testing with value 3741511574, 970079 functions
-    testing with value 2756324031, 469625 functions
-    testing with value 1872869435, 675528 functions
-    testing with value -4153755873, 629358 functions
-    testing with value -3599943383, 908890 functions
-    testing with value -3615845288, 564860 functions
-    testing with value 224070919, 741701 functions
-    testing with value 2481725282, 947238 functions
-    testing with value 3505227312, 947950 functions
-    testing with value 806279481, 15775 functions
-    testing with value 3243937719, 782755 functions
-    testing with value -3878248184, 255968 functions
-    testing with value 885638340, 116704 functions
-    testing with value 933580169, 1008039 functions
-    testing with value 40443009, 676291 functions
-    testing with value 3350978989, 177754 functions
-    testing with value -464772846, 355612 functions
-    testing with value -2585168860, 375342 functions
-    testing with value -3027969027, 244182 functions
-    testing with value 2007946605, 501396 functions
-    testing with value -1790859632, 635304 functions
-    testing with value 1386701282, 90445 functions
-    testing with value -2297988911, 262735 functions
-    testing with value -3880272748, 766388 functions
-    testing with value -3435621770, 670038 functions
-    testing with value -3169637667, 452929 functions
-    testing with value -3796042156, 734789 functions
+    testing with value -1487017168, 586831 functions
+    testing with value 2693496529, 947693 functions
+    testing with value -2553326158, 248183 functions
+    testing with value -3979218788, 987666 functions
+    testing with value -57060179, 1015368 functions
+    testing with value 3651520910, 991652 functions
+    testing with value -3729234103, 995530 functions
+    testing with value -2464122823, 1005271 functions
+    testing with value 656447235, 758925 functions
+    testing with value 533682194, 178175 functions
+    testing with value -264717116, 844268 functions
+    testing with value 1240250745, 361737 functions
+    testing with value 3403622094, 597972 functions
+    testing with value 347990739, 309815 functions
+    testing with value 204102520, 118387 functions
+    testing with value 1944457386, 957899 functions
+    testing with value 3099451883, 690779 functions
+    testing with value 224677826, 406420 functions
+    testing with value 2513118019, 565100 functions
+    testing with value -1819411429, 621440 functions
+    testing with value 2042169542, 510541 functions
+    testing with value 1781656454, 703975 functions
+    testing with value -2443023453, 468046 functions
+    testing with value -1513639713, 552119 functions
+    testing with value -4171112937, 70873 functions
+    testing with value -2173867874, 254841 functions
+    testing with value -1916773955, 1006030 functions
+    testing with value 837353881, 893861 functions
+    testing with value 3193232788, 655817 functions
+    testing with value 1724963963, 479676 functions
+    testing with value 2850451056, 720303 functions
+    testing with value 1229381414, 516822 functions
+    testing with value 537123441, 1040784 functions
+    testing with value 756021950, 867658 functions
+    testing with value 4186327015, 598393 functions
+    testing with value 3947233852, 545627 functions
+    testing with value -1916289400, 808258 functions
+    testing with value -2609902056, 619770 functions
+    testing with value -2737399536, 203270 functions
+    testing with value 2826214126, 203019 functions
+    testing with value 1204409288, 918956 functions
+    testing with value -3393998811, 988490 functions
+    testing with value -3385209075, 796388 functions
+    testing with value 3319971832, 155341 functions
+    testing with value -3269703613, 184135 functions
+    testing with value 1187758972, 619168 functions
+    testing with value 1251896864, 194716 functions
+    testing with value -2942465814, 560011 functions
+    testing with value 1357156273, 614156 functions
+    testing with value -2183224822, 412663 functions
 
 
 ## Test cases passed withour errors
