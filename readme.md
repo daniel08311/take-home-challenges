@@ -272,6 +272,7 @@ for val, function_count in zip(vals, function_counts):
 ```python
 ''' 
     The algorithm takes in a num and a isNegative flag(1 for num > 0, -1 for else) as inputs
+    The function returns next greater number if found or return None
     Let n be the digit length of num
     The first for statement will iterate for a maximum of n-1 steps
     The second for statement will only be triggered once and the maximum iterations is n-2 steps
