@@ -1,7 +1,7 @@
 # Problem 1 - Implementing a Pipe Function
 
 ## Fisrt we define pointed_function and pipe_function
-* pointed_function takes an int val and return val + 1
+* pointed_function takes an int val and returns val + 1
 * pipe_function takes a val and an arbitrary number of functions and transform val by those functions 
 
 
@@ -272,7 +272,7 @@ for val, function_count in zip(vals, function_counts):
 ```python
 ''' 
     The algorithm takes in a num and a isNegative flag(1 for num > 0, -1 for else) as inputs
-    The function returns next greater number if found or return None
+    The function returns next greater number if found or returns None
     Let n be the digit length of num
     The first for statement will iterate for a maximum of n-1 steps
     The second for statement will only be triggered once and the maximum iterations is n-2 steps
