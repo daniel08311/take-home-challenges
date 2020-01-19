@@ -1,3 +1,4 @@
+
 # Problem 1 - Implementing a Pipe Function
 
 ## Fisrt we define pointed_function and pipe_function
@@ -7,17 +8,15 @@
 
 ```python
 '''
-    function which will be passed into pipe function
+    The function which will be passed into pipe function.
 '''
 def pointed_function(val):
     return val + 1
 
 
 '''
-    pipe function continuously transform val
-    by calling function(val) for every function 
-    passed through args.
-    return None if type error occurs
+    Pipe function continuously transform val by calling function(val) for every function passed through args.
+    Return None if type error occurs.
 '''
 def pipe_function(val, *args):
     
@@ -94,7 +93,7 @@ assert(pipe_function(pointed_function, pointed_function, pointed_function) == No
 
 ```python
 ''' 
-    another pointed function which might be passed into pipe function
+    Another pointed function which might be passed into pipe function
 ''' 
 def another_pointed_function(val):
     return val + "1"
@@ -166,7 +165,7 @@ test_sample_count = 50
 # generate random vals ranging from -2^32 to 2^32
 vals = random.sample(range(-2**32, 2**32), test_sample_count)
 
-# generate random function counts ranging from 0 to 2**20 to be passed into pipe_function
+# generate random function counts ranging from 0 to 2^20 to be passed into pipe_function
 function_counts = random.sample(range(0, 2**20), test_sample_count)
 ```
 
@@ -184,58 +183,180 @@ for val, function_count in zip(vals, function_counts):
     test_pipe_function(val, function_count)
 ```
 
-    testing with value -1487017168, 586831 functions
-    testing with value 2693496529, 947693 functions
-    testing with value -2553326158, 248183 functions
-    testing with value -3979218788, 987666 functions
-    testing with value -57060179, 1015368 functions
-    testing with value 3651520910, 991652 functions
-    testing with value -3729234103, 995530 functions
-    testing with value -2464122823, 1005271 functions
-    testing with value 656447235, 758925 functions
-    testing with value 533682194, 178175 functions
-    testing with value -264717116, 844268 functions
-    testing with value 1240250745, 361737 functions
-    testing with value 3403622094, 597972 functions
-    testing with value 347990739, 309815 functions
-    testing with value 204102520, 118387 functions
-    testing with value 1944457386, 957899 functions
-    testing with value 3099451883, 690779 functions
-    testing with value 224677826, 406420 functions
-    testing with value 2513118019, 565100 functions
-    testing with value -1819411429, 621440 functions
-    testing with value 2042169542, 510541 functions
-    testing with value 1781656454, 703975 functions
-    testing with value -2443023453, 468046 functions
-    testing with value -1513639713, 552119 functions
-    testing with value -4171112937, 70873 functions
-    testing with value -2173867874, 254841 functions
-    testing with value -1916773955, 1006030 functions
-    testing with value 837353881, 893861 functions
-    testing with value 3193232788, 655817 functions
-    testing with value 1724963963, 479676 functions
-    testing with value 2850451056, 720303 functions
-    testing with value 1229381414, 516822 functions
-    testing with value 537123441, 1040784 functions
-    testing with value 756021950, 867658 functions
-    testing with value 4186327015, 598393 functions
-    testing with value 3947233852, 545627 functions
-    testing with value -1916289400, 808258 functions
-    testing with value -2609902056, 619770 functions
-    testing with value -2737399536, 203270 functions
-    testing with value 2826214126, 203019 functions
-    testing with value 1204409288, 918956 functions
-    testing with value -3393998811, 988490 functions
-    testing with value -3385209075, 796388 functions
-    testing with value 3319971832, 155341 functions
-    testing with value -3269703613, 184135 functions
-    testing with value 1187758972, 619168 functions
-    testing with value 1251896864, 194716 functions
-    testing with value -2942465814, 560011 functions
-    testing with value 1357156273, 614156 functions
-    testing with value -2183224822, 412663 functions
+    testing with value -1483325456, 796160 functions
+    testing with value -1512173059, 922952 functions
+    testing with value -1143583892, 883800 functions
+    testing with value 2283250251, 755754 functions
+    testing with value 3942814691, 59163 functions
+    testing with value 3113161153, 160827 functions
+    testing with value 2940074926, 274933 functions
+    testing with value -2460483182, 674160 functions
+    testing with value 2527938765, 393359 functions
+    testing with value 1067154268, 85885 functions
+    testing with value -3926900422, 543973 functions
+    testing with value 1298104664, 47927 functions
+    testing with value -2819786689, 406185 functions
+    testing with value 421040440, 123207 functions
+    testing with value 424506090, 204011 functions
+    testing with value -1506461099, 19360 functions
+    testing with value 3467767656, 1000297 functions
+    testing with value 3375653013, 208851 functions
+    testing with value -2354628421, 243535 functions
+    testing with value -2856509166, 433868 functions
+    testing with value -429250660, 30627 functions
+    testing with value -3595360284, 739153 functions
+    testing with value 3666931411, 321210 functions
+    testing with value -3200818050, 506352 functions
+    testing with value -931247735, 86527 functions
+    testing with value -3190915515, 551352 functions
+    testing with value 1500918432, 696216 functions
+    testing with value -609945618, 800571 functions
+    testing with value 1815303360, 542387 functions
+    testing with value -4165773089, 702127 functions
+    testing with value 3411809905, 427996 functions
+    testing with value 369536594, 143261 functions
+    testing with value -3768866179, 848093 functions
+    testing with value -1523276101, 203903 functions
+    testing with value 2115603783, 27828 functions
+    testing with value 1391180652, 5435 functions
+    testing with value -2875922897, 592665 functions
+    testing with value -305921524, 780341 functions
+    testing with value 162857717, 1045759 functions
+    testing with value -344769339, 691602 functions
+    testing with value 3042115133, 978985 functions
+    testing with value -370509748, 363260 functions
+    testing with value -1540350991, 90755 functions
+    testing with value -1277497192, 409139 functions
+    testing with value -3330058403, 911591 functions
+    testing with value 1781396119, 360193 functions
+    testing with value 1231094438, 92278 functions
+    testing with value -2163114536, 173838 functions
+    testing with value -1144458058, 506608 functions
+    testing with value -1497946874, 382539 functions
 
 
 ## Test cases passed withour errors
 * I tested around 1000 on my laptop and passed also.
-* Note that passing in too many functions into pipe_function results in memory error
+* Note that passing in too many functions into pipe_function results in memory error (turn down maximum function_counts) 
+
+# Problem 2 - Finding Next Greater Element
+* I'll try my best to explain my thoughts. 
+* We can have a more In-depth discussion during the interview. 
+* The key points are:
+    * We search backwards since we want to find the *smallest* next element, going backwards makes sure that the solution we found are at the smallest possible digit.
+    * For a number which is in descending order, e.g 98765, we cannot find a next greater element.
+    * We have to find the point at which a number breaks the descending trend.
+    * Take 498765 for example, we can see that at the point 4, the descending trend stops.
+    * We should now determine what is the smallest number larger than 4 on the right hand side of 9 (including 9) for swapping.
+    * Note that we can not consider numbers on the left hand side of 9 since it effects the larger digits.
+    * Now that we swapped 4 and 5, the number become 598764
+    * We can safely assume that the numbers on the right hand side of 9 is still in descending trend
+    * Since it's in descending trend, reversing numbers on the right hand side of 9 returns the smallest number possible
+    * 598764 -> 546789
+    * For a negative number, all remains the same excepts that now we stop when a number breaks the *ascending* trend. 
+    * I'll explain more for the negative case during interview.
+
+* The detailed steps goes like this:
+    * Consider a number 6876
+    * First transform it into an int list [6,8,7,6]
+    * Look at the list *backward*
+    * Now we are at the rightmost number 6
+    * Check if number 6 is larger than it's left neighbor 7
+    * Since it's not, we move on and look at 7 with its left neighbor 8
+    * Stop at 8 since its left neighbor 6 is smaller than 8
+    * Find the smallest number on the right hand side of 8 (including 8) which is larger than 6
+    * The number should be 7
+    * Swap the leftmost 6 with 7 and get 7866
+    * Now reverse the order of numbers on the right hand side of 8 (including 8) 
+    * We get 7668 
+    * Problem Solved
+
+
+```python
+''' 
+    The algorithm takes in a num and a isNegative flag(1 for num > 0, -1 for else) as inputs
+    Let n be the digit length of num
+    The first for statement will iterate for a maximum of n-1 steps
+    The second for statement will only be triggered once and the maximum iterations is n-2 steps
+    Combined time complexity should be O(n-1 + n-2) = O(n)
+'''
+def next_greater_number(num, isNegative=1):
+    
+    # turn num into string first  
+    num_string = str(num)
+    
+    # reverse num string since we want to search from the last digit
+    num_string_reverse = num_string[::-1]
+    
+    # turn reversed string in to list of int number
+    reverse_list = [int(char) for char in num_string_reverse]
+
+    length = len(num_string)
+    
+    for i in range(length - 1):
+        
+        # continue searching for i if reverse_list[i] isn't larger than reverse_list[i+1]
+        if isNegative*reverse_list[i] <= isNegative*reverse_list[i+1]:
+            continue
+            
+        # the swapping part
+        for j in range(i+1):
+            if isNegative*reverse_list[j] > isNegative*reverse_list[i+1]:
+                reverse_list[j], reverse_list[i+1] = reverse_list[i+1], reverse_list[j]
+                result = reverse_list[i+1:length][::-1] + reverse_list[:i+1]
+                return isNegative * int("".join([str(digit) for digit in result]))
+
+    return None
+```
+
+
+```python
+def run_algo(number):
+    if number < 0:
+        return(next_greater_number(-number, -1))
+    return(next_greater_number(number))
+```
+
+
+```python
+# test for the basic cases given in the email
+assert(run_algo(123) == 132)
+assert(run_algo(5566) == 5656)
+assert(run_algo(-3310) == -3301)
+```
+
+
+```python
+# test for ascending, descending and flat scenario for positive numbers
+assert(run_algo(123456789) == 123456798)
+assert(run_algo(987654321) == None)
+assert(run_algo(11111111) == None)
+```
+
+
+```python
+# test for ascending, descending and flat scenario for negative numbers
+assert(run_algo(-123456789) == None)
+assert(run_algo(-987654321) == -987654312)
+assert(run_algo(-11111111) == None)
+```
+
+
+```python
+# test for mountain shaped numbers (middle digits larger than digits on two sides)
+assert(run_algo(135765431) == 136134557)
+assert(run_algo(-135765431) == -135765413)
+```
+
+
+```python
+# test for V shaped numbers (middle digits larger than digits on two sides)
+assert(run_algo(96432455) == 96432545)
+assert(run_algo(-96432455) == -96425543)
+```
+
+* We have tested for ascending, descending, flat, V shaped and mountain shaped numbers.
+* We can assume that all other shape, e.g W shaped, M shaped, will do fine since they are just a combination of the tested shape.
+
+# This is the end of my answer for the two problems
+# Thanks again for putting effort into reading it !
